@@ -1,17 +1,40 @@
-<h1>Criar Produto</h1>
-<form action="/products/create" method="post">
-    <div class="form-control">
-        <label for="name">Nome do Produto:</label>
-        <input type="text" name="name" placeholder="Insira o nome do produto" required>
-    </div>
-    <div class="form-control">
-        <label for="price">Preço:</label>
-        <input type="number" name="price" step="0.01" placeholder="Insira o preço do produto" required>
-    </div>
-    <div class="form-control">
-        <label for="description">Descrição:</label>
-        <textarea type="text" name="description" placeholder="Descrição do produto"></textarea>
-    </div>
-    <button type="submit" class="btn btn-primary">Criar Produto</button>
+<div class="page-header">
+  <h1>Cadastrar Novo Produto</h1>
+  <p>Preencha os detalhes abaixo para adicionar um novo produto ao catálogo</p>
+</div>
 
-</form>
+<div class="success-message" id="successMessage">
+  <i class="fas fa-check-circle"></i> Produto cadastrado com sucesso!
+</div>
+
+<div class="form-card">
+  <div class="decoration circle"></div>
+  <div class="decoration square"></div>
+  
+  <form action="/products/create" method="post" id="productForm">
+    <div class="form-control">
+      <label for="name"><i class="fas fa-tag"></i> Nome do Produto</label>
+      <div class="input-icon">
+        <i class="fas fa-box"></i>
+      </div>
+      <input type="text" id="name" name="name" placeholder="Ex: Smartphone XYZ" required>
+    </div>
+    
+    <div class="form-control">
+      <label for="price"><i class="fas fa-dollar-sign"></i> Preço</label>
+      <div class="input-icon">
+        <i class="fas fa-money-bill-wave"></i>
+      </div>
+      <input type="number" id="price" name="price" step="0.01" placeholder="Ex: 1299.99" required>
+    </div>
+    
+    <div class="form-control">
+      <label for="description"><i class="fas fa-align-left"></i> Descrição</label>
+      <textarea id="description" name="description" placeholder="Descreva as características do produto..."></textarea>
+    </div>
+    
+    <button type="submit" class="submit-btn">
+      Criar Produto <i class="fas fa-arrow-right"></i>
+    </button>
+  </form>
+</div>

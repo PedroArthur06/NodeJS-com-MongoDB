@@ -1,21 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NodeJS + MongoDB</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
   <nav id="navbar">
     <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/products">Produtos</a></li>
-      <li><a href="/products/create">Criar produto</a></li>
+      <li><a href="/"><i class="fas fa-home"></i> Home</a></li>
+
+      <li><a href="/products"><i class="fas fa-box-open"></i> Produtos</a></li>
+      <li><a href="/products/create"><i class="fas fa-plus-circle"></i> Criar produto</a></li>
     </ul>
   </nav>
   <div class="container">
     {{{ body }}}
   </div>
+  
+  <footer>
+    <p>© 2025 Sistema de Cadastro de Produtos | Desenvolvido com NodeJS e MongoDB</p>
+  </footer>
+  
+  <script src="/js/main.js"></script>
 </body>
 </html>
