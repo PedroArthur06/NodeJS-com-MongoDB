@@ -1,0 +1,45 @@
+<div class="page-header">
+  <h1>Editar Produto</h1>
+</div>
+
+<div class="success-message" id="successMessage">
+  <i class="fas fa-check-circle"></i> Produto cadastrado com sucesso!
+</div>
+
+<div class="form-card">
+  <div class="decoration circle"></div>
+  <div class="decoration square"></div>
+  
+  <form action="/products/edit" method="post" id="productForm">
+    <input type="hidden" name="_id" value="{{product._id}}">
+    <div class="form-control">
+      <label for="name"><i class="fas fa-tag"></i> Nome do Produto</label>
+      <div class="input-icon">
+        <i class="fas fa-box"></i>
+      </div>
+      <input type="text" id="name" name="name" placeholder="Ex: Smartphone XYZ" value="{{product.name}}" required>
+    </div>
+
+    <div class="form-control">
+      <label for="image"><i></i> Imagem do produto</label>
+      <input type="text" name="image" placeholder="Insira a url da imagem" value="{{product.image}}" required>
+    </div>
+    
+    <div class="form-control">
+      <label for="price"><i class="fas fa-dollar-sign"></i> Preço</label>
+      <div class="input-icon">
+        <i class="fas fa-money-bill-wave"></i>
+      </div>
+      <input type="number" id="price" name="price" step="0.01" placeholder="Ex: 1299.99" value="{{product.price}}" required>
+    </div>
+    
+    <div class="form-control">
+      <label for="description"><i class="fas fa-align-left"></i> Descrição</label>
+      <textarea id="description" name="description" placeholder="Descreva as características do produto...">{{product.description}}</textarea>
+    </div>
+    
+    <button type="submit" class="submit-btn">
+      Editar <i class="fas fa-arrow-right"></i>
+    </button>
+  </form>
+</div>
